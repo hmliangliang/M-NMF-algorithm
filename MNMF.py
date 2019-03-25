@@ -12,10 +12,10 @@ def MNMF(data,k):
     b=0.5
     m=100
     N_MAX=100
-    H=np.zeros((data.shape[0],k))#初始化结果矩阵
+    H=np.random.rand(data.shape[0],k)#初始化结果矩阵
     e=0#边的数目
     for i in range(data.shape[0]):
-        H[i,np.random.randint(0,k,1)]=1
+        #H[i,np.random.randint(0,k,1)]=1
         e=e+sum(data[i,:])#计算图中边的数目
     e=e/2
     result=[]#初始化结果矩阵
